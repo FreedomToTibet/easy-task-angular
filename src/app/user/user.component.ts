@@ -21,6 +21,11 @@ interface User {
 export class UserComponent {
 	@Input() user!: User;
 	@Output() select = new EventEmitter<string>();
+	@Input() isActive = false;
+
+	toggleActive() {
+		this.isActive = !this.isActive;
+	}
 
 	get imagePath() {
 		return `images/${this.user.avatar}`;
