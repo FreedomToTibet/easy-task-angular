@@ -1,4 +1,4 @@
-export interface NewTaskData {
+export interface INewTaskData {
 	title: string;
 	summary: string;
 	date: string;
